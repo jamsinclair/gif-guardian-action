@@ -1,0 +1,20 @@
+{
+  "name": "gif-guardian",
+  "version": "0.1.0",
+  "description": "The silent but animated protector of Pull Requests. Automatically label Pull Requests without gifs.",
+  "main": "dist/index.js",
+  "author": "Jamie Sinclair <jamsinclairnz@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "ncc build src",
+    "test": "xo"
+  },
+  "dependencies": {
+    "@actions/core": "^1.2.1",
+    "@actions/github": "^2.0.1"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.21.0",
+    "xo": "^0.25.3"
+  }
+}

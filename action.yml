@@ -1,0 +1,15 @@
+name: 'Gif Guardian'
+description: 'The silent but animated protector of Pull Requests. Automatically label Pull Requests without gifs.'
+author: 'Jamie Sinclair <jamsinclairnz@gmail.com>'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+inputs:
+  github_token:
+    description: 'The GITHUB_TOKEN secret'
+    required: true
+  label:
+    description: 'The label to add to Pull Requests without a gif in their body'
+    required: true
+  strict:
+    description: 'When set to `true`, Pull Requests without gifs will receive a failing status check'
