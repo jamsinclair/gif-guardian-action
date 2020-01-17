@@ -5,7 +5,7 @@ const {hasGif} = require('./utils');
 async function run() {
 	const githubToken = core.getInput('github_token', {required: true});
 	const rejectedLabel = core.getInput('label', {required: true});
-	const strictMode = core.getInput('strictMode') === 'true';
+	const strict = core.getInput('strict') === 'true';
 
 	const octokit = new github.GitHub(githubToken);
 	const {pull_request: pr} = github.context.payload;
@@ -41,7 +41,7 @@ async function run() {
 
 	await octokit.issues.update(params);
 
-	if (!hasGifInBody && strictMode) {
+	if (!hasGifInBody && strict) {
 		core.setFailed('Pull Request body does not contain a gif');
 	}
 }
