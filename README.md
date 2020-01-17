@@ -17,8 +17,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: update-pull-request
-      uses: ./
+    - name: Gif Guardian
+      uses: jamsinclair/gif-guardian-action@v0.1.1
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         label: "🙅‍♀️ No Gif"
