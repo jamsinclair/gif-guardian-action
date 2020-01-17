@@ -13,3 +13,6 @@ inputs:
     required: true
   strict:
     description: 'When set to `true`, Pull Requests without gifs will receive a failing status check'
+branding:
+  icon: 'shield'
+  color: 'purple'
